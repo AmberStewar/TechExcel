@@ -58,4 +58,4 @@ jobs:
       run: docker build -t ${{ env.registryName }}/${{ env.repositoryName }}:${{ env.tag }} --build-arg build_version=$tag $dockerFolderPath
       
     - name: Docker Push
-      run: docker push ${{ env.registryName }}/${{ env.repositoryName }}
+      run: docker push ${{ env.registryName }}/${{ env.repositoryName }}:${{ env.tag }}
