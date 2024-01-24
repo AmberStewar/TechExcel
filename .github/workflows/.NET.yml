@@ -55,7 +55,7 @@ jobs:
         logout: true
         
     - name: Docker Build
-      run: docker build -t $registryName/$repositoryName:$tag --build-arg build_version=$tag $dockerFolderPath
+      run: docker build -t ${{ env.registryName }}/${{ env.repositoryName }}:$tag --build-arg build_version=$tag $dockerFolderPath
       
     - name: Docker Push
       run: docker push $registryName/$repo  
