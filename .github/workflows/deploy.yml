@@ -49,4 +49,4 @@
           resourceGroupName: $TechExcelMPP
           template: ./InfrastructureAsCode/main.bicep
           # Use the environment variable called targetEnv
-          parameters: environment=$dev
+          parameters: environment=$targetEnv
